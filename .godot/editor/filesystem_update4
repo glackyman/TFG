@@ -1,0 +1,10 @@
+res://scenes/entorn/map_example.tscn
+res://scenes/characters/Warrior.tscn
+res://scenes/entorn/arbol.tscn
+res://scenes/entorn/arbol2.tscn
+res://scenes/entorn/arbol3.tscn
+res://scenes/entorn/arbol4.tscn
+res://scripts/Player.cs
+res://scripts/Warrior.cs
+res://scripts/Tree.cs
+res://scripts/Wizzard.cs

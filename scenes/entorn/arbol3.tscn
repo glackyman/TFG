@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6elyq5vjhqyt"]
+
+[ext_resource type="Script" path="res://scripts/Tree.cs" id="1_3ia6l"]
+[ext_resource type="Texture2D" uid="uid://ds18jyh76yc00" path="res://art/Sprites/Trees/arbol3_shadow.png" id="1_3yh75"]
+[ext_resource type="Texture2D" uid="uid://dd3hwpavqwbml" path="res://art/Sprites/Trees/arbol3_tronco.png" id="2_d7ogf"]
+[ext_resource type="Texture2D" uid="uid://bi7u5n7pqk3w6" path="res://art/Sprites/Trees/arbol3_hojas.png" id="3_nwjg4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d6y57"]
+radius = 9.33929
+
+[node name="Arbol" type="StaticBody2D"]
+texture_filter = 1
+position = Vector2(593, 242)
+scale = Vector2(1.5, 1.5)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_3ia6l")
+metadata/_edit_group_ = true
+
+[node name="Leaves" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(-0.333344, -25.6667)
+texture = ExtResource("3_nwjg4")
+
+[node name="Trunk" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-0.999992, -25.6667)
+texture = ExtResource("2_d7ogf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.333321, -1.90735e-06)
+shape = SubResource("CircleShape2D_d6y57")
+
+[node name="shadow" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(-1.66666, 7.33333)
+texture = ExtResource("1_3yh75")

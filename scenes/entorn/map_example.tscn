@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://csnas8t8ionmi"]
+
+[ext_resource type="PackedScene" uid="uid://58mpk2r048sl" path="res://scenes/characters/Warrior.tscn" id="2_nc56d"]
+[ext_resource type="PackedScene" uid="uid://cs8kdybk27hfp" path="res://scenes/entorn/arbol.tscn" id="3_efulw"]
+[ext_resource type="PackedScene" uid="uid://gnpdtlouj2hb" path="res://scenes/entorn/arbol2.tscn" id="4_2y73g"]
+[ext_resource type="PackedScene" uid="uid://b6elyq5vjhqyt" path="res://scenes/entorn/arbol3.tscn" id="5_43v5j"]
+[ext_resource type="PackedScene" uid="uid://cdn7c2h2iaoxt" path="res://scenes/entorn/arbol4.tscn" id="5_cdcll"]
+
+[node name="GameScene" type="Node2D"]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(288, 525)
+
+[node name="Warrior" parent="." instance=ExtResource("2_nc56d")]
+z_index = 1
+position = Vector2(-2818, -741)
+
+[node name="Arbol2" parent="." instance=ExtResource("4_2y73g")]
+position = Vector2(-3272, -694)
+
+[node name="Arbol" parent="." instance=ExtResource("3_efulw")]
+position = Vector2(-3268, -611)
+
+[node name="Arbol3" parent="." instance=ExtResource("5_43v5j")]
+position = Vector2(-3271, -801)
+
+[node name="Arbol4" parent="." instance=ExtResource("5_cdcll")]
+position = Vector2(-3075, -943)
