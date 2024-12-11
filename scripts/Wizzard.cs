@@ -21,7 +21,7 @@ public Wizzard(){
 	
 }
 
- public override string Attack(     
+ public override string Attack()
  {
 	 
 	 return base.Attack() + "el enemigo arde por la fuerza arcana";
