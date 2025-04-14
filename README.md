@@ -23,11 +23,11 @@ _(a completar)_
 
 ## 🛠️ Problemas
 
-### [06/04/2025 - 13/04/2025] Error de sincronización con Git
+### [13/04/2025 - 14/04/2025] Error de sincronización con Git
 
 - ⚠️ **Problema:** No se detectaban los cambios correctamente al hacer `git add` y `git push`.  
   Probablemente era por una mala configuración del repositorio.
-- ✔️ **Solución:** Se resolvió eliminando el repositorio y creándolo de nuevo.g
+- ✔️ **Solución:** Se resolvió eliminando el repositorio y creándolo de nuevo
 ---
 
 ## 🚀 Avances

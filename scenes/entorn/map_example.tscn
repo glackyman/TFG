@@ -187,7 +187,7 @@ tile_map_data = PackedByteArray("AAB6AC8AAAABAAcAAAB6AC4AAAAAAAgAAAB6AC0AAAAAAAc
 tile_set = SubResource("TileSet_hel15")
 
 [node name="Warrior" parent="." instance=ExtResource("2_nc56d")]
-position = Vector2(493, 359)
+position = Vector2(-287, 314)
 
 [node name="Key" parent="." instance=ExtResource("5_qvehe")]
 position = Vector2(378, 401)

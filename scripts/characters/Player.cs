@@ -121,64 +121,12 @@ public partial class Player : CharacterBody2D
 	{
 		animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
 	}
-	/*
+
+
 	public override void _PhysicsProcess(double delta)
 	{
-		Vector2 velocity = Velocity;
-		GD.Print("Movimiento: ", velocity);
-
-		// Add the gravity.
-		if (!IsOnFloor())
-		{
-
-		}
-
-		// Handle Jump.
-		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
-		{
-			velocity.Y = JumpVelocity;
-		}
-
-		// Get the input direction and handle the movement/deceleration.
-		// As good practice, you should replace UI actions with custom gameplay actions.
-		 Vector2 direction = Input.GetVector("left", "right", "up", "down");
-		if (direction != Vector2.Zero)
-		{
-			velocity.X = direction.X * Speed;
-			velocity.Y = direction.Y * Speed;
-
-			// Cambiar la animación según la dirección
-			if (direction.Y < 0) // Movimiento hacia arriba
-			{
-				animationPlayer.Play("run_back");
-			}
-			else if (direction.Y > 0) // Movimiento hacia abajo
-			{
-				animationPlayer.Play("run_front");
-				
-			}
-			else if (direction.X < 0) // Movimiento hacia la izquierda
-			{
-				animationPlayer.Play("run_slide");
-			}
-			else if (direction.X > 0) // Movimiento hacia la derecha
-			{
-				animationPlayer.Play("run_rigth");
-			}
-			
-		}
-		else
-		{
-			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
-		}
-
-		Velocity = velocity;
-		MoveAndSlide();
-	}
-	*/
-	public override void _PhysicsProcess(double delta)
-	{
-		Vector2 velocity = Velocity;
+		
+	Vector2 velocity = Velocity;
 
 		// Obtener la dirección de entrada del jugador.
 		Vector2 direction = Input.GetVector("left", "right", "up", "down");
@@ -213,7 +161,7 @@ public partial class Player : CharacterBody2D
 			velocity.Y = 0;
 
 			// Cambiar a animación de "idle" si tienes una.
-			//animationPlayer.Play("idle");
+			animationPlayer.Play("idle");
 		}
 
 		// Aplicar el movimiento.

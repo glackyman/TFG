@@ -15,3 +15,4 @@ C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug
 C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug\UnnamedProject.pdb
 C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug\UnnamedProject.genruntimeconfig.cache
 C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug\ref\UnnamedProject.dll
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug\UnnamedProject.sourcelink.json

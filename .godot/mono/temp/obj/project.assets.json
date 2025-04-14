@@ -94,9 +94,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\holas\\OneDrive\\Documentos\\proyectofinal casa\\ProyectoFinal.csproj",
-      "projectName": "ProyectoFinal",
-      "projectPath": "C:\\Users\\holas\\OneDrive\\Documentos\\proyectofinal casa\\ProyectoFinal.csproj",
+      "projectUniqueName": "C:\\Users\\holas\\OneDrive\\Documentos\\proyectofinal casa\\UnnamedProject.csproj",
+      "projectName": "UnnamedProject",
+      "projectPath": "C:\\Users\\holas\\OneDrive\\Documentos\\proyectofinal casa\\UnnamedProject.csproj",
       "packagesPath": "C:\\Users\\holas\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\holas\\OneDrive\\Documentos\\proyectofinal casa\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
