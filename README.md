@@ -17,7 +17,7 @@
 
 ## Mecanicas
 
-_(a completar)_
+    _(a completar)_
 
 ---
 
@@ -41,9 +41,15 @@ Probablemente era por una mala configuración del repositorio.
   - Llaves
   - Monedas
   - Árboles  
-  (*falta terminar su lógica*)
+  (_falta terminar su lógica_)
 - Se hicieron los **primeros diseños de mapas**.
 
 ### 🔹 Durante las prácticas
 
-_(a completar)_
+    _(a completar)_
+
+---
+
+## ✅ Lista de tareas
+
+    _(a completar)_
