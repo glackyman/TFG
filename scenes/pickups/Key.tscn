@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyu80yuj2cqqw"]
+
+[ext_resource type="Script" path="res://scripts/pickups/Key.cs" id="1_r5wbg"]
+[ext_resource type="Texture2D" uid="uid://dj7lwvy72pfp8" path="res://art/Sprites/coins-chests-etc-2-0-noborders.png" id="1_sgnwr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ps2cb"]
+size = Vector2(7, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8dmt"]
+atlas = ExtResource("1_sgnwr")
+region = Rect2(576, 416, 16, 16)
+
+[node name="Key" type="Area2D"]
+z_index = 4
+texture_filter = 1
+position = Vector2(-8, 0)
+scale = Vector2(2.5, 2.5)
+script = ExtResource("1_r5wbg")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15.5, -1)
+shape = SubResource("RectangleShape2D_ps2cb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(16, -1)
+texture = SubResource("AtlasTexture_s8dmt")
+
+[connection signal="body_entered" from="." to="." method="pickUpKey"]

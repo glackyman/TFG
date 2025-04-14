@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://gnpdtlouj2hb"]
+
+[ext_resource type="Texture2D" uid="uid://dqkc3lsdn5wfx" path="res://art/Sprites/Trees/arbol2_shadow.png" id="1_ih5o7"]
+[ext_resource type="Texture2D" uid="uid://chhoq6g6y8w72" path="res://art/Sprites/Trees/arbol2_tronco.png" id="2_cpnu3"]
+[ext_resource type="Texture2D" uid="uid://cuvjgrqm2f4up" path="res://art/Sprites/Trees/arbol2_hojas.png" id="3_663sl"]
+[ext_resource type="Script" path="res://scripts/entorn/Tree.cs" id="4_2obcj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23p2j"]
+size = Vector2(2, 3.4)
+
+[node name="Arbol" type="StaticBody2D"]
+texture_filter = 1
+position = Vector2(767, 334)
+scale = Vector2(3, 3)
+collision_layer = 2
+script = ExtResource("4_2obcj")
+
+[node name="Leaves" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(6.10352e-05, -23.6667)
+texture = ExtResource("3_663sl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 4
+position = Vector2(1.00002, -4.5)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_23p2j")
+
+[node name="Trunk" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(-0.333328, -29.3333)
+texture = ExtResource("2_cpnu3")
+
+[node name="shadow" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(-2, 7)
+texture = ExtResource("1_ih5o7")

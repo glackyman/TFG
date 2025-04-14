@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm5fq7qbx8lb2"]
+
+[ext_resource type="Script" uid="uid://b61rwk4lubnvo" path="res://scripts/characters/Player.cs" id="1_x3tts"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_x3tts")
+metadata/_edit_group_ = true
