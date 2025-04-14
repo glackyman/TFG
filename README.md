@@ -5,9 +5,10 @@
 
 ## 🛠️ Problemas
 
-Este repositorio fue **borrado y creado de nuevo** debido a problemas con la sincronización:  
-Git no detectaba bien los cambios y había errores al subir contenido.  
-Actualmente, el problema **parece estar solucionado**.
+### [06/04/2025 - 13/04/2025] Error de sincronización con Git
+No se detectaban los cambios correctamente al hacer `git add` y `git push`.  
+Probablemente era por una mala configuración del repositorio.  
+✔️ Se resolvió eliminando el repositorio y creándolo de nuevo.
 
 ---
 
@@ -24,5 +25,5 @@ Actualmente, el problema **parece estar solucionado**.
 - Se hicieron los **primeros diseños de mapas**.
 
 ### 🔹 Durante las prácticas
-_(a completar según avances actuales)_
+_(a completar)_
 
