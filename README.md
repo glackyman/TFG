@@ -17,7 +17,7 @@
 
 ## Mecanicas
 
-    _(a completar)_
+_(a completar)_
 
 ---
 
@@ -46,10 +46,10 @@ Probablemente era por una mala configuración del repositorio.
 
 ### 🔹 Durante las prácticas
 
-    _(a completar)_
+_(a completar)_
 
 ---
 
 ## ✅ Lista de tareas
 
-    _(a completar)_
+_(a completar)_
