@@ -1,0 +1,17 @@
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\bin\Debug\UnnamedProject.deps.json
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\bin\Debug\UnnamedProject.runtimeconfig.json
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\bin\Debug\UnnamedProject.dll
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\bin\Debug\UnnamedProject.pdb
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug\UnnamedProject.csproj.AssemblyReference.cache
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug\UnnamedProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug\UnnamedProject.AssemblyInfoInputs.cache
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug\UnnamedProject.AssemblyInfo.cs
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug\UnnamedProject.csproj.CoreCompileInputs.cache
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug\UnnamedP.E27C96BB.Up2Date
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug\UnnamedProject.dll
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug\refint\UnnamedProject.dll
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug\UnnamedProject.pdb
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug\UnnamedProject.genruntimeconfig.cache
+C:\Users\holas\OneDrive\Documentos\proyectofinal casa\.godot\mono\temp\obj\Debug\ref\UnnamedProject.dll
