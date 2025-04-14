@@ -1,15 +1,28 @@
 # TFG
-## F. Javier Garcia Gonzalez
+## F. Javier García González
 
-# Problemas
-    El repositorio fue borrado y vuelto a crear debido a problemas
-    no me sincronizaba ni detectaba los cambios correctamente, creo que ya esta solucionado
+---
 
-# Avances 
+## 🛠️ Problemas
 
-## Previo a las practicas
-    Se incluyeron clases para los personajes aun faltando logica compleja, se establecio el movimiento del jugador y sus animaciones. 
-    Se crearon diferentes tipos de objetos que estan por terminar su logica como llaves,monedas y arboles. 
-    Tambien se hiceron los primeros diseños de mapas
+Este repositorio fue **borrado y creado de nuevo** debido a problemas con la sincronización:  
+Git no detectaba bien los cambios y había errores al subir contenido.  
+Actualmente, el problema **parece estar solucionado**.
 
-## Durante las practicas 
+---
+
+## 🚀 Avances
+
+### 🔹 Previo a las prácticas
+- Se incluyeron clases base para los personajes, aunque aún falta desarrollar lógica compleja.
+- Se implementó el **movimiento del jugador** junto con sus **animaciones**.
+- Se crearon varios tipos de objetos interactivos como:
+  - Llaves
+  - Monedas
+  - Árboles  
+  (*falta terminar su lógica*)
+- Se hicieron los **primeros diseños de mapas**.
+
+### 🔹 Durante las prácticas
+_(a completar según avances actuales)_
+
