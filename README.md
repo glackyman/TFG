@@ -1,22 +1,25 @@
 # TFG
 
+## F. Javier García González
+
 ## ⚔️ Glacky`s Andventurs
-
-### F. Javier García González
-
-## Sipnosis
 
     Debes recuperar la reliquia familiar, una espada de tu difunto padre
     perdida en el tiempo y el olvido al igual que el.
 
     En el juego te embarcaras en una aventura de exploración y algo de lucha para abrirte paso
----
 
 ## IDE
 
 - Godot Engine
 - Visual Studio Code
 - Visual Studio 2022
+
+## Mecanicas
+
+    _(a completar)*
+
+---
 
 ## 🛠️ Problemas
 
