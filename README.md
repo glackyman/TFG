@@ -25,7 +25,7 @@ _(a completar)_
 
 ### [06/04/2025 - 13/04/2025] Error de sincronización con Git
 
-No se detectaban los cambios correctamente al hacer `git add` y `git push`.  
+- No se detectaban los cambios correctamente al hacer `git add` y `git push`.  
 Probablemente era por una mala configuración del repositorio.  
 ✔️ Se resolvió eliminando el repositorio y creándolo de nuevo.
 
