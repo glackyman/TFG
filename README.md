@@ -37,7 +37,7 @@ _(a completar)_
 
 ## 🚀 Avances
 
-### 🔹 Previo a las prácticas
+## 🔹 Previo a las prácticas
 
 - Se incluyeron clases base para los personajes, aunque aún falta desarrollar lógica compleja.
 - Se implementó el **movimiento del jugador** junto con sus **animaciones**.
@@ -48,9 +48,9 @@ _(a completar)_
   (_falta terminar su lógica_)
 - Se hicieron los **primeros diseños de mapas**.
 
-### 🔹 Durante las prácticas
+## 🔹 Durante las prácticas
 
-### Semana 1-3
+- ### Semana 1-3
 
 - Se modificaron sprites y se reicieron animaciones
 - Se emepezaron a desarollar las primeras colisiones de las llaves, monedas y arboles
