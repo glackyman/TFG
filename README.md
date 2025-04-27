@@ -29,10 +29,9 @@ _(a completar)_
   Probablemente era por una mala configuración del repositorio.
 - ✔️ **Solución:** Se resolvió eliminando el repositorio y creándolo de nuevo
 
-### [26/04/2025 - 27/04/2025] Error de sincronización con Git
+### [26/04/2025 - 27/04/2025] Error de reproduccion de animaciones
 
 - ⚠️ **Problema:** Las animaciones de `ataque` son canceladas por `idle/movimiento` se plantea solucionar inlcuyendo una maquina de estados.
-- ✔️ **Solución:** por sulucionar
 
 ---
 
@@ -51,7 +50,7 @@ _(a completar)_
 
 ### 🔹 Durante las prácticas
 
-# Semana 1-3
+### Semana 1-3
 
 - Se modificaron sprites y se reicieron animaciones
 - Se emepezaron a desarollar las primeras colisiones de las llaves, monedas y arboles
