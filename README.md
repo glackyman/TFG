@@ -45,11 +45,32 @@ _(a completar)_
 
 ### 🔹 Durante las prácticas
 
-_(a completar)_
+# Semana 1-3
+
+- Se modificaron sprites y se reicieron animaciones
+- Se emepezaron a desarollar las primeras colisiones de las llaves, monedas y arboles
 
 ---
 
 ## ✅ Lista de tareas
 
-_(a completar)_
+- 🛠️ **Máquinas de estados**
+  - Jugador: [ ] Implementar máquina de estados para controlar animaciones y comportamientos del jugador.
+  - Enemigos: [ ] Implementar máquina de estados para controlar los comportamientos de los enemigos.
 
+- 🛠️ **Colisiones completadas**
+  - Jugador/Enemigos: [ ] Finalizar la lógica de colisiones entre personajes y objetos.
+  
+- 🛠️ **Desarrollo de mapa**
+  - [ ] Completar los diseños de los primeros mapas jugables.
+  - [ ] Agregar puntos de interacción (puertas, objetos, etc.).
+
+- 🛠️ **Primera mazmorras**
+  - [ ] Desarrollar la lógica básica de las primeras mazmorras.
+  - [ ] Crear los primeros enemigos de mazmorras y sus comportamientos.
+
+- 🛠️ **Lógica de enemigos**
+  - [ ] Programar el comportamiento de los enemigos en combate y patrullaje.
+  
+- 🛠️ **Generación procedural de mazmorras**
+  - [ ] Implementar un sistema de generación procedural de mazmorras.

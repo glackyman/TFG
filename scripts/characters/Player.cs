@@ -14,6 +14,7 @@ public partial class Player : CharacterBody2D
 	private Vector2 lastDirection = Vector2.Zero;
 
 	private Sprite2D sprite;
+	private bool isAttacking;
 
 	[Export]
 	public string NameP
@@ -129,7 +130,6 @@ public partial class Player : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
-
 		Vector2 velocity = Velocity;
 
 		// Obtener la dirección de entrada del jugador.
@@ -186,8 +186,7 @@ public partial class Player : CharacterBody2D
 		{
 			if (lastDirection.Y < 0)
 			{
-				animationPlayer.Stop();
-				animationPlayer.Play("attack_top");
+				animationPlayer.Play("attack_top3");
 			}
 			else if (lastDirection.Y > 0)
 			{
@@ -198,8 +197,10 @@ public partial class Player : CharacterBody2D
 				animationPlayer.Play("attack_side");
 			}
 
-			return; // Muy importante: salir aquí para no seguir moviendo mientras atacas
+			lastDirection = Vector2.Zero; // Prueba esto
+			return;
 		}
+
 		// Aplicar el movimiento.
 		Velocity = velocity;
 		MoveAndSlide();
@@ -212,5 +213,6 @@ public partial class Player : CharacterBody2D
 			}
 
 		}
+		isAttacking = false;
 	}
 }
