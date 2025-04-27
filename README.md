@@ -57,7 +57,7 @@ _(a completar)_
 - Se modificaron sprites y se reicieron animaciones
   - se añadio la posibilidad de atacar
 - Se emepezaron a desarollar las primeras colisiones de las llaves, monedas y arboles
-- Se creo una escena con un suelo, con colisiones. Un arbol una llave y una moneda, el personaje y el entorno parece responder correctamente.(salvo las llaves [Link Text](# 🛠️ Problemas))
+- Se creo una escena con un suelo, con colisiones. Un arbol una llave y una moneda, el personaje y el entorno parece responder correctamente.(salvo las llaves)
 
 ---
 
