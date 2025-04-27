@@ -74,4 +74,4 @@ _(a completar)_
   - [ ] Programar el comportamiento de los enemigos en combate y patrullaje.
   
 - 🛠️ **Generación procedural de mazmorras**
-  - [ ] Implementar un sistema de generación procedural de mazmorras.
+  - [x] Implementar un sistema de generación procedural de mazmorras.
