@@ -29,6 +29,11 @@ _(a completar)_
   Probablemente era por una mala configuración del repositorio.
 - ✔️ **Solución:** Se resolvió eliminando el repositorio y creándolo de nuevo
 
+### [26/04/2025 - 27/04/2025] Error de sincronización con Git
+
+- ⚠️ **Problema:** Las animaciones de `ataque` son canceladas por `idle/movimiento` se plantea solucionar inlcuyendo una maquina de estados.
+- ✔️ **Solución:** por sulucionar
+
 ---
 
 ## 🚀 Avances
@@ -53,7 +58,7 @@ _(a completar)_
 
 ---
 
-## ✅ Lista de tareas
+## ✅ Lista de tareas (por ampliar)
 
 - 🛠️ **Máquinas de estados**
   - [ ] Jugador: Implementar máquina de estados para controlar animaciones y comportamientos del jugador.
@@ -74,4 +79,4 @@ _(a completar)_
   - [ ] Programar el comportamiento de los enemigos en combate y patrullaje.
   
 - 🛠️ **Generación procedural de mazmorras**
-  - [x] Implementar un sistema de generación procedural de mazmorras.
+  - [ ] Implementar un sistema de generación procedural de mazmorras.
