@@ -33,6 +33,8 @@ _(a completar)_
 
 - ⚠️ **Problema:** Las animaciones de `ataque` son canceladas por `idle/movimiento` se plantea solucionar inlcuyendo una maquina de estados.
 
+- ⚠️ **Problema:** Por algun motivo las `colsiones de las llaves` dejaron de funcionar, puede ser algun fallo de cambiar tantas cosas despues de tanto tiempo, se plantea arreglo mas adelante, cuando se vuelvan a trabajar en estos items.
+
 ---
 
 ## 🚀 Avances
@@ -53,7 +55,9 @@ _(a completar)_
 - ### Semana 1-3
 
 - Se modificaron sprites y se reicieron animaciones
+  - se añadio la posibilidad de atacar
 - Se emepezaron a desarollar las primeras colisiones de las llaves, monedas y arboles
+- Se creo una escena con un suelo, con colisiones. Un arbol una llave y una moneda, el personaje y el entorno parece responder correctamente.(salvo las llaves [Link Text](# 🛠️ Problemas))
 
 ---
 
