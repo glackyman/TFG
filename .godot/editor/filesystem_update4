@@ -1,3 +1,6 @@
+res://scenes/entorn/map_example.tscn
+res://scenes/characters/Player.tscn
+res://scenes/characters/Warrior.tscn
 res://scripts/characters/Warrior.cs
 res://scripts/pickups/PickUp.cs
 res://scripts/entorn/Tree.cs
@@ -6,6 +9,3 @@ res://scripts/characters/Wizzard.cs
 res://scripts/pickups/Key.cs
 res://scripts/characters/Player.cs
 res://scripts/entorn/GameSceneExample.cs
-res://scenes/entorn/map_example.tscn
-res://scenes/characters/Player.tscn
-res://scenes/characters/Warrior.tscn

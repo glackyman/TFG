@@ -11,6 +11,9 @@ public partial class Player : CharacterBody2D
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -400.0f;
 	private AnimationPlayer animationPlayer;
+	private Vector2 lastDirection = Vector2.Zero;
+
+	private Sprite2D sprite;
 
 	[Export]
 	public string NameP
@@ -120,13 +123,14 @@ public partial class Player : CharacterBody2D
 	public override void _Ready()
 	{
 		animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
+		sprite = GetNode<Sprite2D>("Sprite2D"); // <-- Aquí
 	}
 
 
 	public override void _PhysicsProcess(double delta)
 	{
-		
-	Vector2 velocity = Velocity;
+
+		Vector2 velocity = Velocity;
 
 		// Obtener la dirección de entrada del jugador.
 		Vector2 direction = Input.GetVector("left", "right", "up", "down");
@@ -135,24 +139,28 @@ public partial class Player : CharacterBody2D
 		{
 			// Mover al personaje según la dirección de entrada.
 			velocity = direction * Speed;
-//
+
+			lastDirection = direction;
+			//
 			//// Cambiar la animación según la dirección.
-			//if (direction.Y < 0) // Movimiento hacia arriba
-			//{
-				//animationPlayer.Play("run_back");
-			//}
-			//else if (direction.Y > 0) // Movimiento hacia abajo
-			//{
-				//animationPlayer.Play("run_front");
-			//}
-			//else if (direction.X < 0) // Movimiento hacia la izquierda
-			//{
-				//animationPlayer.Play("run_slide");
-			//}
-			//else if (direction.X > 0) // Movimiento hacia la derecha
-			//{
-				//animationPlayer.Play("run_rigth");
-			//}
+			if (direction.Y < 0) // Movimiento hacia arriba
+			{
+				animationPlayer.Play("run_top");
+			}
+			else if (direction.Y > 0) // Movimiento hacia abajo
+			{
+				animationPlayer.Play("run_down");
+			}
+			else if (direction.X < 0) // Movimiento hacia la izquierda
+			{
+				animationPlayer.Play("run_side");
+				sprite.FlipH = false;
+			}
+			else if (direction.X > 0) // Movimiento hacia la derecha
+			{
+				animationPlayer.Play("run_side");
+				sprite.FlipH = true;
+			}
 		}
 		else
 		{
@@ -160,10 +168,38 @@ public partial class Player : CharacterBody2D
 			velocity.X = 0;
 			velocity.Y = 0;
 
-			// Cambiar a animación de "idle" si tienes una.
-			animationPlayer.Play("idle");
+			if (lastDirection.Y < 0)
+			{
+				animationPlayer.Play("idle_top");
+			}
+			else if (lastDirection.Y > 0)
+			{
+				animationPlayer.Play("idle_down");
+			}
+			else
+			{
+				animationPlayer.Play("idle_side");
+			}
 		}
 
+		if (Input.IsActionJustPressed("attack"))
+		{
+			if (lastDirection.Y < 0)
+			{
+				animationPlayer.Stop();
+				animationPlayer.Play("attack_top");
+			}
+			else if (lastDirection.Y > 0)
+			{
+				animationPlayer.Play("attack_down");
+			}
+			else
+			{
+				animationPlayer.Play("attack_side");
+			}
+
+			return; // Muy importante: salir aquí para no seguir moviendo mientras atacas
+		}
 		// Aplicar el movimiento.
 		Velocity = velocity;
 		MoveAndSlide();
@@ -174,7 +210,7 @@ public partial class Player : CharacterBody2D
 			{
 				tree.IsTouched = true;
 			}
-			 
+
 		}
 	}
 }
