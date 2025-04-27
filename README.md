@@ -28,6 +28,7 @@ _(a completar)_
 - ⚠️ **Problema:** No se detectaban los cambios correctamente al hacer `git add` y `git push`.  
   Probablemente era por una mala configuración del repositorio.
 - ✔️ **Solución:** Se resolvió eliminando el repositorio y creándolo de nuevo
+
 ---
 
 ## 🚀 Avances
@@ -55,11 +56,11 @@ _(a completar)_
 ## ✅ Lista de tareas
 
 - 🛠️ **Máquinas de estados**
-  - Jugador: [ ] Implementar máquina de estados para controlar animaciones y comportamientos del jugador.
-  - Enemigos: [ ] Implementar máquina de estados para controlar los comportamientos de los enemigos.
+  - [ ] Jugador: Implementar máquina de estados para controlar animaciones y comportamientos del jugador.
+  - [ ] Enemigos: Implementar máquina de estados para controlar los comportamientos de los enemigos.
 
 - 🛠️ **Colisiones completadas**
-  - Jugador/Enemigos: [ ] Finalizar la lógica de colisiones entre personajes y objetos.
+  - [ ] Jugador/Enemigos: Finalizar la lógica de colisiones entre personajes y objetos.
   
 - 🛠️ **Desarrollo de mapa**
   - [ ] Completar los diseños de los primeros mapas jugables.
