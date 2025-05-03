@@ -11,9 +11,8 @@
 
 ## IDE
 
-- Godot Engine
-- Visual Studio Code
-- Visual Studio 2022
+- Godot Engine, como motor de juego.
+- Visual Studio Code, como editor
 
 ## Mecanicas
 
@@ -55,14 +54,14 @@ _(a completar)_
 
 - ### Semana 1-3
 
-- Se modificaron sprites y se reicieron animaciones
-  - se añadio la posibilidad de atacar
-- Se emepezaron a desarollar las primeras colisiones de las llaves, monedas y arboles
-- Se creo una escena con un suelo, con colisiones. Un arbol una llave y una moneda, el personaje y el entorno parece responder correctamente.(salvo las llaves)
+  - Se modificaron sprites y se reicieron animaciones
+    - se añadio la posibilidad de atacar
+  - Se emepezaron a desarollar las primeras colisiones de las llaves, monedas y arboles
+  - Se creo una escena con un suelo, con colisiones. Un arbol una llave y una moneda, el personaje y el entorno parece responder correctamente.(salvo las llaves)
 
 - ### Semana 4
 
-- Maquina de estados basica agregada.
+  - Maquina de estados basica agregada.
 
 ---
 
