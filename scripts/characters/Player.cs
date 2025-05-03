@@ -1,20 +1,34 @@
 using Godot;
 using System;
 
+// Este script define la clase Player, que hereda de CharacterBody2D.
+// La clase Player representa al jugador en el juego y maneja su estado, salud, nivel, experiencia, ataque y defensa.
+// También maneja la animación y el movimiento del jugador en el juego.
+// La clase utiliza el sistema de animación de Godot para cambiar entre diferentes estados de animación (idle, run, attack).
+// La clase también maneja la entrada del jugador para mover al personaje y realizar ataques.
+// También tiene métodos para atacar, defenderse y recibir daño.
+
 public partial class Player : CharacterBody2D
 {
+	private AnimationPlayer animationPlayer;
+	private Vector2 lastDirection = Vector2.Zero;
+	private Sprite2D sprite;
+	private AnimationTree animationTree;
+	private AnimationNodeStateMachinePlayback stateMachine;
 
+	private enum State
+	{
+		idle,
+		run,
+		attack
+	}
+	State currentState = State.idle;
+
+	private bool isAttacking;
 	private string name;
 	private double hp, def, lvl, xp, ap, ad;
 	private bool isDead = false;
-
 	public const float Speed = 300.0f;
-	public const float JumpVelocity = -400.0f;
-	private AnimationPlayer animationPlayer;
-	private Vector2 lastDirection = Vector2.Zero;
-
-	private Sprite2D sprite;
-	private bool isAttacking;
 
 	[Export]
 	public string NameP
@@ -93,6 +107,7 @@ public partial class Player : CharacterBody2D
 		this.Ap = ap;
 		this.Ad = ad;
 	}
+
 	public Player()
 	{
 
@@ -124,86 +139,48 @@ public partial class Player : CharacterBody2D
 	public override void _Ready()
 	{
 		animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
+		animationTree = GetNode<AnimationTree>("AnimationTree");
 		sprite = GetNode<Sprite2D>("Sprite2D"); // <-- Aquí
+		stateMachine = (AnimationNodeStateMachinePlayback)animationTree.Get("parameters/playback");
 	}
 
 
 	public override void _PhysicsProcess(double delta)
 	{
-		Vector2 velocity = Velocity;
-
-		// Obtener la dirección de entrada del jugador.
+		Vector2 velocity;
 		Vector2 direction = Input.GetVector("left", "right", "up", "down");
 
+		// Manejo de ataque
+		if (Input.IsActionJustPressed("attack"))
+		{
+			isAttacking = true;
+			ChangeState(State.attack);
+			return; // Salimos del método para que no se solapen animaciones
+		}
+
+		// Movimiento o idle
 		if (direction != Vector2.Zero)
 		{
-			// Mover al personaje según la dirección de entrada.
 			velocity = direction * Speed;
-
 			lastDirection = direction;
-			//
-			//// Cambiar la animación según la dirección.
-			if (direction.Y < 0) // Movimiento hacia arriba
+
+			if (Math.Abs(direction.X) > Math.Abs(direction.Y))
 			{
-				animationPlayer.Play("run_top");
+				sprite.FlipH = direction.X > 0;
 			}
-			else if (direction.Y > 0) // Movimiento hacia abajo
-			{
-				animationPlayer.Play("run_down");
-			}
-			else if (direction.X < 0) // Movimiento hacia la izquierda
-			{
-				animationPlayer.Play("run_side");
-				sprite.FlipH = false;
-			}
-			else if (direction.X > 0) // Movimiento hacia la derecha
-			{
-				animationPlayer.Play("run_side");
-				sprite.FlipH = true;
-			}
+
+
+			ChangeState(State.run);
 		}
 		else
 		{
-			// Detener suavemente el movimiento cuando no hay entrada.
-			velocity.X = 0;
-			velocity.Y = 0;
-
-			if (lastDirection.Y < 0)
-			{
-				animationPlayer.Play("idle_top");
-			}
-			else if (lastDirection.Y > 0)
-			{
-				animationPlayer.Play("idle_down");
-			}
-			else
-			{
-				animationPlayer.Play("idle_side");
-			}
+			velocity = Vector2.Zero;
+			ChangeState(State.idle);
 		}
 
-		if (Input.IsActionJustPressed("attack"))
-		{
-			if (lastDirection.Y < 0)
-			{
-				animationPlayer.Play("attack_top3");
-			}
-			else if (lastDirection.Y > 0)
-			{
-				animationPlayer.Play("attack_down");
-			}
-			else
-			{
-				animationPlayer.Play("attack_side");
-			}
-
-			lastDirection = Vector2.Zero; // Prueba esto
-			return;
-		}
-
-		// Aplicar el movimiento.
 		Velocity = velocity;
 		MoveAndSlide();
+
 		for (int i = 0; i < GetSlideCollisionCount(); i++)
 		{
 			var collision = GetSlideCollision(i);
@@ -211,8 +188,26 @@ public partial class Player : CharacterBody2D
 			{
 				tree.IsTouched = true;
 			}
-
 		}
-		isAttacking = false;
+	}
+
+	private void ChangeState(State newState)
+	{
+		if (currentState == newState) return;
+
+		currentState = newState;
+
+		switch (newState)
+		{
+			case State.idle:
+				stateMachine.Travel("idle_side");
+				break;
+			case State.run:
+				stateMachine.Travel("run_side");
+				break;
+			case State.attack:
+				stateMachine.Travel("attack_side");
+				break;
+		}
 	}
 }
