@@ -68,7 +68,7 @@ _(a completar)_
 ## ✅ Lista de tareas (por ampliar)
 
 - 🛠️ **Máquinas de estados**
-  - [ ] Jugador: Implementar máquina de estados para controlar animaciones y comportamientos del jugador.
+  - [x] Jugador: Implementar máquina de estados para controlar animaciones y comportamientos del jugador.
   - [ ] Enemigos: Implementar máquina de estados para controlar los comportamientos de los enemigos.
 
 - 🛠️ **Colisiones completadas**
@@ -87,3 +87,9 @@ _(a completar)_
   
 - 🛠️ **Generación procedural de mazmorras**
   - [ ] Implementar un sistema de generación procedural de mazmorras.
+
+## 🧠 Ideas
+
+- Pense en que para el objetivo final haga falta avanzar en equipo, una idea de un juego es que exploras las cuevas hasta tu nivel y luego vendes todo lo que ganas, con eso compras y mejoras equipo nuevo
+
+- No tengo claro la generacion de las cuevas, si de forma procedural por partida, o cada vez que las explores.
