@@ -107,7 +107,6 @@ public partial class Player : CharacterBody2D
 		this.Ap = ap;
 		this.Ad = ad;
 	}
-
 	public Player()
 	{
 
@@ -136,29 +135,34 @@ public partial class Player : CharacterBody2D
 
 		return $"{NameP} fue atacado";
 	}
+
 	public override void _Ready()
 	{
 		animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
 		animationTree = GetNode<AnimationTree>("AnimationTree");
-		sprite = GetNode<Sprite2D>("Sprite2D"); // <-- Aquí
+		sprite = GetNode<Sprite2D>("Sprite2D");
 		stateMachine = (AnimationNodeStateMachinePlayback)animationTree.Get("parameters/playback");
-	}
 
+		// Inicializar los parámetros de mezcla (asegúrate de que los paths sean correctos)
+		animationTree.Set("parameters/idle/blend_position", 0.0f);
+		animationTree.Set("parameters/run/blend_position", 0.0f);
+		animationTree.Set("parameters/attack/blend_position", 0.0f); // Correcto si tienes un BlendSpace llamado "attack_blend"
+
+
+	}
 
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity;
-		Vector2 direction = Input.GetVector("left", "right", "up", "down");
+		Vector2 direction = Input.GetVector("left", "right", "up", "down").Normalized();
 
-		// Manejo de ataque
 		if (Input.IsActionJustPressed("attack"))
 		{
 			isAttacking = true;
-			ChangeState(State.attack);
-			return; // Salimos del método para que no se solapen animaciones
+			ChangeState(State.attack, lastDirection);
+			return;
 		}
 
-		// Movimiento o idle
 		if (direction != Vector2.Zero)
 		{
 			velocity = direction * Speed;
@@ -169,13 +173,12 @@ public partial class Player : CharacterBody2D
 				sprite.FlipH = direction.X > 0;
 			}
 
-
-			ChangeState(State.run);
+			ChangeState(State.run, direction);
 		}
 		else
 		{
 			velocity = Vector2.Zero;
-			ChangeState(State.idle);
+			ChangeState(State.idle, lastDirection);
 		}
 
 		Velocity = velocity;
@@ -189,9 +192,10 @@ public partial class Player : CharacterBody2D
 				tree.IsTouched = true;
 			}
 		}
+		
 	}
 
-	private void ChangeState(State newState)
+	private void ChangeState(State newState, Vector2 direction)
 	{
 		if (currentState == newState) return;
 
@@ -200,14 +204,40 @@ public partial class Player : CharacterBody2D
 		switch (newState)
 		{
 			case State.idle:
-				stateMachine.Travel("idle_side");
+				stateMachine.Travel("idle");
+				SetBlendAmount("idle/blend_position", GetBlendValue(direction));
 				break;
 			case State.run:
-				stateMachine.Travel("run_side");
+				stateMachine.Travel("run");
+				SetBlendAmount("run/blend_position", GetBlendValue(direction));
 				break;
 			case State.attack:
-				stateMachine.Travel("attack_side");
+				stateMachine.Travel("attack");
+				SetBlendAmount("attack/blend_position", GetBlendValue(direction));
 				break;
 		}
+	}
+
+	private void SetBlendAmount(string parameterPath, float blendValue)
+	{
+		if (animationTree != null)
+		{
+			animationTree.Set($"parameters/{parameterPath}", blendValue);
+		}
+	}
+
+	private float GetBlendValue(Vector2 direction)
+	{
+		if (Math.Abs(direction.Y) > Math.Abs(direction.X))
+		{
+
+			if (direction.Y < -0.5f) return -0.1f; // Arriba
+			if (direction.Y > 0.5f) return 0.1f;  // Abajo
+		}
+		else if (Math.Abs(direction.X) > 0.5f)
+		{
+			return 0.0f; // Lado
+		}
+		return 0.0f; // Valor por defecto (lado)
 	}
 }
