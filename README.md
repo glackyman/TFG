@@ -43,6 +43,10 @@ _(a completar)_
 - ⚠️ **Problema:** Pequeño error de lógica que quedó subido a GitHub. En el flip del eje H se cometió el error al invertir la condición para el flip.
 - ✔️ **Solución:** Se arregló invirtiendo este error anteriormente cometido.
 
+### [10/05/2025 - 11/05/2025] Comportamiento enemigos y jugador
+
+- ⚠️ **Problema:** Se descubrio un bug en el movimiento del jugador, la animacion q se muestra 
+
 ---
 
 ## 🚀 Avances
@@ -72,6 +76,14 @@ _(a completar)_
   - Máquina de estados básica agregada.
 
   - Se agregó complejidad a la máquina de estados.
+
+- ### Semana 5
+
+  - Se añadio una clase Enemy
+    - Con sus propiedades
+    - 2 clases, por ahora. La extienden; Troles y Enanos.
+    - Se empezaron hacer las primeras pruebas de seguimiento al jugador
+  - Debido a la falta de sprites en Top-Down de enemigos que cumplan con los requisitos que busco, usaré el mismo sprite del jugador pero tintado de colores segun el enemigo, por ejemplo verde para los Trol y rojo para los Enanos.
 
 ---
 
