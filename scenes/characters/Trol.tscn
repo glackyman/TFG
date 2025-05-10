@@ -1,9 +1,9 @@
-[gd_scene load_steps=35 format=3 uid="uid://58mpk2r048sl"]
+[gd_scene load_steps=35 format=3 uid="uid://c7p8pbq4vdbqj"]
 
-[ext_resource type="Script" path="res://scripts/characters/Warrior.cs" id="1_4nw1d"]
-[ext_resource type="Texture2D" uid="uid://drrho08n3hd5s" path="res://art/MainCharacter/charater.png" id="2_e3w3r"]
+[ext_resource type="Texture2D" uid="uid://drrho08n3hd5s" path="res://art/MainCharacter/charater.png" id="1_eescw"]
+[ext_resource type="Script" path="res://scripts/characters/enemys/Trol.cs" id="1_f8kad"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lh3io"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_8a2iu"]
 radius = 26.0192
 
 [sub_resource type="Animation" id="Animation_cknfs"]
@@ -264,7 +264,7 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3eta1"]
 
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_xxgyo"]
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_8p2pm"]
 states/Start/position = Vector2(204, 100)
 states/attack/node = SubResource("AnimationNodeBlendSpace1D_fqr86")
 states/attack/position = Vector2(604.122, 139)
@@ -275,18 +275,18 @@ states/run/position = Vector2(385.121, 228)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_lng8g"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_325bj"), "run", "attack", SubResource("AnimationNodeStateMachineTransition_pdxft"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_u0l3k"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_24gt4"), "attack", "run", SubResource("AnimationNodeStateMachineTransition_krc8a"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_3eta1")]
 graph_offset = Vector2(-106.398, -104.45)
 
-[node name="Warrior" type="CharacterBody2D"]
+[node name="Trol" type="CharacterBody2D"]
+light_mask = 2
+visibility_layer = 7
 z_index = 5
-position = Vector2(255, 220)
-scale = Vector2(3, 3)
-collision_mask = 7
-script = ExtResource("1_4nw1d")
+script = ExtResource("1_f8kad")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0.956863, 0, 1)
 texture_filter = 1
 position = Vector2(1, 0.666666)
 scale = Vector2(0.96875, 0.979167)
-texture = ExtResource("2_e3w3r")
+texture = ExtResource("1_eescw")
 hframes = 30
 vframes = 2
 frame = 50
@@ -294,9 +294,7 @@ frame = 50
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 2
 position = Vector2(1, 4)
-shape = SubResource("CircleShape2D_lh3io")
-
-[node name="Camera2D" type="Camera2D" parent="."]
+shape = SubResource("CircleShape2D_8a2iu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -304,7 +302,7 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeStateMachine_xxgyo")
+tree_root = SubResource("AnimationNodeStateMachine_8p2pm")
 anim_player = NodePath("../AnimationPlayer")
 parameters/attack/blend_position = 0.0
 parameters/idle/blend_position = 0.0
