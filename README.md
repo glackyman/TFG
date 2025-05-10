@@ -45,7 +45,9 @@ _(a completar)_
 
 ### [10/05/2025 - 11/05/2025] Comportamiento enemigos y jugador
 
-- ⚠️ **Problema:** Se descubrio un bug en el movimiento del jugador, la animacion q se muestra 
+- ⚠️ **Problema:** Se descubrio un `bug en el movimiento del jugador` la animacion q se muestra es correspondiente al `primer imput` y no tiene en cuenta que se cambie, es decir si se pulsar hacia arriba y aun lado y luego se pulsa hacia arriba se queda "clavada" la animacion up en vez la de side
+
+- ⚠️ **Problema:** Los enemigos aunque sigan al jugador lo hacen de forma continua y sin logica, ademas de que se quedan clavados entre ellos y demas.
 
 ---
 
