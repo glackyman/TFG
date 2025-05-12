@@ -24,6 +24,7 @@ texture_region_size = Vector2i(32, 32)
 0:4/animation_frame_3/duration = 2.0
 0:4/0 = 0
 0:4/0/terrain_set = 0
+0:4/0/terrain = 0
 0:4/0/terrains_peering_bit/right_side = 0
 0:4/0/terrains_peering_bit/bottom_right_corner = 0
 0:4/0/terrains_peering_bit/bottom_side = 0
@@ -191,22 +192,42 @@ tile_set = SubResource("TileSet_hel15")
 
 [node name="Arbol" parent="Node2D/TileMapLayer" instance=ExtResource("3_q4r8h")]
 position = Vector2(394, 33)
+collision_mask = 5
 
 [node name="Warrior" parent="." instance=ExtResource("2_nc56d")]
 position = Vector2(-287, 314)
 
 [node name="Key" parent="." instance=ExtResource("5_qvehe")]
-position = Vector2(378, 401)
+position = Vector2(884, 430)
 script = null
 
 [node name="Coin" parent="." instance=ExtResource("6_h4sxr")]
-position = Vector2(468.028, 487.812)
+position = Vector2(413, 745)
 script = null
 
 [node name="Enano" parent="." instance=ExtResource("7_70587")]
 position = Vector2(-219.259, 669.719)
-PlayerPath = NodePath(".")
 
 [node name="Trol" parent="." instance=ExtResource("7_ohy4n")]
 position = Vector2(38.1201, 654.663)
-PlayerPath = NodePath("../Warrior")
+
+[node name="Enano2" parent="." instance=ExtResource("7_70587")]
+position = Vector2(-112, 590)
+
+[node name="Enano" parent="Enano2" instance=ExtResource("7_70587")]
+position = Vector2(-219.259, 669.719)
+
+[node name="Trol" parent="Enano2" instance=ExtResource("7_ohy4n")]
+position = Vector2(38.1201, 654.663)
+
+[node name="Enano2" parent="Enano2" instance=ExtResource("7_70587")]
+position = Vector2(-112, 590)
+
+[node name="Enano" parent="Enano2/Enano2" instance=ExtResource("7_70587")]
+position = Vector2(-219.259, 669.719)
+
+[node name="Trol" parent="Enano2/Enano2" instance=ExtResource("7_ohy4n")]
+position = Vector2(38.1201, 654.663)
+
+[node name="Enano2" parent="Enano2/Enano2" instance=ExtResource("7_70587")]
+position = Vector2(-112, 590)

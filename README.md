@@ -43,11 +43,11 @@ _(a completar)_
 - ⚠️ **Problema:** Pequeño error de lógica que quedó subido a GitHub. En el flip del eje H se cometió el error al invertir la condición para el flip.
 - ✔️ **Solución:** Se arregló invirtiendo este error anteriormente cometido.
 
-### [10/05/2025 - 11/05/2025] Comportamiento enemigos y jugador
+### [10/05/2025 - 12/05/2025] Comportamiento enemigos y jugador
 
 - ⚠️ **Problema:** Se descubrio un `bug en el movimiento del jugador` la animacion q se muestra es correspondiente al `primer imput` y no tiene en cuenta que se cambie, es decir si se pulsar hacia arriba y aun lado y luego se pulsa hacia arriba se queda "clavada" la animacion up en vez la de side
 
-- ⚠️ **Problema:** Los enemigos aunque sigan al jugador lo hacen de forma continua y sin logica, ademas de que se quedan clavados entre ellos y demas.
+- ⚠️ **Problema:** Los enemigos aunque sigan al jugador lo hacen de forma continua y sin logica, ademas de que se quedan clavados entre ellos y demas, tampoco atacan.
 
 ---
 
@@ -85,6 +85,7 @@ _(a completar)_
     - Con sus propiedades
     - 2 clases, por ahora. La extienden; Troles y Enanos.
     - Se empezaron hacer las primeras pruebas de seguimiento al jugador
+    - Los enemigos se generan las escenas de forma preterminada, esta por ver en tiempo de ejecucion
   - Debido a la falta de sprites en Top-Down de enemigos que cumplan con los requisitos que busco, usaré el mismo sprite del jugador pero tintado de colores segun el enemigo, por ejemplo verde para los Trol y rojo para los Enanos.
 
 ---
@@ -96,7 +97,9 @@ _(a completar)_
   - [ ] Enemigos: Implementar máquina de estados para controlar los comportamientos de los enemigos.
 
 - 🛠️ **Colisiones completadas**
-  - [ ] Jugador/Enemigos: Finalizar la lógica de colisiones entre personajes y objetos.
+  - [x] Jugador/Enemigos: Finalizar la lógica de colisiones entre personajes y objetos.
+  - [x] Las señales ya funciona!.
+  - [] Señales para enemigos
 
 - 🛠️ **Desarrollo de mapa**
   - [ ] Completar los diseños de los primeros mapas jugables.

@@ -182,6 +182,7 @@ public partial class Player : CharacterBody2D
 		}
 
 		Velocity = velocity;
+
 		MoveAndSlide();
 
 		for (int i = 0; i < GetSlideCollisionCount(); i++)
@@ -191,8 +192,16 @@ public partial class Player : CharacterBody2D
 			{
 				tree.IsTouched = true;
 			}
+
+			if (collision.GetCollider() is Enemy enemyNode)
+			{
+				// Calcular la dirección del empuje (en la dirección del movimiento del jugador)
+				Vector2 pushDirection = Velocity.Normalized();
+				// Aplicar un pequeño impulso al enemigo
+				enemyNode.Velocity += pushDirection * 20075.0f; // Ajusta la fuerza del empuje según sea necesario
+			}
 		}
-		
+
 	}
 
 	private void ChangeState(State newState, Vector2 direction)

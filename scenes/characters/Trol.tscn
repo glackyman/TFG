@@ -280,6 +280,9 @@ light_mask = 2
 visibility_layer = 7
 z_index = 5
 script = ExtResource("1_f8kad")
+Speed = 75.0
+Health = 150
+AttackDamage = 15
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0.956863, 0, 1)

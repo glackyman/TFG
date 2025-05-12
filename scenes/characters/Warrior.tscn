@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://scripts/characters/Warrior.cs" id="1_4nw1d"]
 [ext_resource type="Texture2D" uid="uid://drrho08n3hd5s" path="res://art/MainCharacter/charater.png" id="2_e3w3r"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lh3io"]
-radius = 26.0192
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kqm2q"]
+radius = 6.66665
+height = 13.3333
 
 [sub_resource type="Animation" id="Animation_cknfs"]
 length = 0.001
@@ -273,7 +274,7 @@ states/idle/position = Vector2(385.121, 100)
 states/run/node = SubResource("AnimationNodeBlendSpace1D_6wsjd")
 states/run/position = Vector2(385.121, 228)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_lng8g"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_325bj"), "run", "attack", SubResource("AnimationNodeStateMachineTransition_pdxft"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_u0l3k"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_24gt4"), "attack", "run", SubResource("AnimationNodeStateMachineTransition_krc8a"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_3eta1")]
-graph_offset = Vector2(-106.398, -104.45)
+graph_offset = Vector2(-468.398, 35.55)
 
 [node name="Warrior" type="CharacterBody2D"]
 z_index = 5
@@ -281,6 +282,11 @@ position = Vector2(255, 220)
 scale = Vector2(3, 3)
 collision_mask = 7
 script = ExtResource("1_4nw1d")
+Health = 100.0
+Level = 1.0
+Def = 25.0
+Ap = 30.0
+Ad = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -293,8 +299,8 @@ frame = 50
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 2
-position = Vector2(1, 4)
-shape = SubResource("CircleShape2D_lh3io")
+position = Vector2(1.33333, 11.6667)
+shape = SubResource("CapsuleShape2D_kqm2q")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

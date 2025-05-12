@@ -280,6 +280,7 @@ z_index = 5
 collision_layer = 2
 collision_mask = 7
 script = ExtResource("1_ocsds")
+Speed = 150.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.620143, 9.62615e-08, 0.307117, 1)
