@@ -99,7 +99,7 @@ _(a completar)_
 - 🛠️ **Colisiones completadas**
   - [x] Jugador/Enemigos: Finalizar la lógica de colisiones entre personajes y objetos.
   - [x] Las señales ya funciona!.
-  - [] Señales para enemigos
+  - [ ] Señales para enemigos
 
 - 🛠️ **Desarrollo de mapa**
   - [ ] Completar los diseños de los primeros mapas jugables.
