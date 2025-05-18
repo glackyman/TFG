@@ -190,7 +190,6 @@ texture_repeat = 1
 position = Vector2(-1, 0)
 sprite_frames = SubResource("SpriteFrames_e4g5e")
 animation = &"five_coin"
-frame = 3
-frame_progress = 0.273184
+frame_progress = 0.454008
 
 [connection signal="body_entered" from="." to="." method="pickUpCoin"]

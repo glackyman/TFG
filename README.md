@@ -16,7 +16,11 @@
 
 ## Mecanicas
 
-_(a completar)_
+Este apartado se dejo en el olvido... muhcas cosas ya esban hechas
+
+- Las monedas se pueden genear de diferentes valores `1, 5 y 10`
+
+- Ahora los PickUps se añaden al inventario del jugador
 
 ---
 
@@ -88,6 +92,12 @@ _(a completar)_
     - Los enemigos se generan las escenas de forma preterminada, esta por ver en tiempo de ejecucion
   - Debido a la falta de sprites en Top-Down de enemigos que cumplan con los requisitos que busco, usaré el mismo sprite del jugador pero tintado de colores segun el enemigo, por ejemplo verde para los Trol y rojo para los Enanos.
 
+- ### Semana 6
+
+  - Se termino la logica de los objetos (salvo su uso), ahora ya se eliminan al recogerse y se añaden al inventario del jugador, se utilizan las misma señales de siempre.
+
+  - Muerte de enemigos
+
 ---
 
 ## ✅ Lista de tareas (por ampliar)
@@ -99,7 +109,7 @@ _(a completar)_
 - 🛠️ **Colisiones completadas**
   - [x] Jugador/Enemigos: Finalizar la lógica de colisiones entre personajes y objetos.
   - [x] Las señales ya funciona!.
-  - [ ] Señales para enemigos
+  - [x] Los enemigos mueren
 
 - 🛠️ **Desarrollo de mapa**
   - [ ] Completar los diseños de los primeros mapas jugables.
@@ -114,6 +124,10 @@ _(a completar)_
 
 - 🛠️ **Generación procedural de mazmorras**
   - [ ] Implementar un sistema de generación procedural de mazmorras.
+
+- 🛠️ **Objetos**
+
+  - [x] Su logica esta finalizada y tienen un buen ciclo de vida. Son eliminadas mediante `QueueFree`
 
 ## 🧠 Ideas
 

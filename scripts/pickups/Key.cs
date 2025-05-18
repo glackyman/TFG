@@ -15,10 +15,11 @@ public partial class Key : PickUp
 
 	public void pickUpKey(Node node)
 	{
-		if (node is CharacterBody2D player)
+		if (node is Player player)
 		{
-
 			GD.Print($"{player.Name} cogio una llave; {Id}");
+			player.AddCoins(1);
+			QueueFree();
 		}
 	}
 }

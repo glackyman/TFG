@@ -29,7 +29,7 @@ public partial class Coin : PickUp
 
 		}
 
-		if (value == 1) 
+		if (value == 1)
 		{
 			animatedSprite.Play("one_coin");
 			Id = 11;
@@ -63,10 +63,11 @@ public partial class Coin : PickUp
 
 	public void pickUpCoin(Node node)
 	{
-		if(node is CharacterBody2D player)
+		if (node is Player player)
 		{
-
 			GD.Print($"{player.Name} cogio moneda {value}; {Id}");
+			player.AddCoins(this.value);
+			QueueFree();
 		}
 	}
 }

@@ -13,7 +13,8 @@ public partial class PickUp : Area2D
 		get { return id; }
 	}
 
-	public string Name {
+	public string Name
+	{
 		set { name = value; }
 		get { return name; }
 	}
@@ -30,4 +31,13 @@ public partial class PickUp : Area2D
 
 	}
 
+	public void pickUp(Node node)
+	{
+		GD.Print("funciona");
+		if (node is CharacterBody2D player)
+		{
+
+			//GD.Print($"{player.Name} cogio una llave; {Id}");
+		}
+	}
 }

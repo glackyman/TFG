@@ -85,7 +85,7 @@
 
         protected virtual void Attack()
         {
-            GD.Print($"{Name} está atacando con {AttackDamage} de daño.");
+            //GD.Print($"{Name} está atacando con {AttackDamage} de daño.");
         }
 
         protected void ChangeState(State newState, Vector2 direction)

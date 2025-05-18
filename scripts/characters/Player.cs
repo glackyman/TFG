@@ -16,17 +16,18 @@ public partial class Player : CharacterBody2D
 	private AnimationTree animationTree;
 	private AnimationNodeStateMachinePlayback stateMachine;
 
-	private enum State
+	public enum State
 	{
 		idle,
 		run,
 		attack
 	}
-	State currentState = State.idle;
+	private State currentState = State.idle;
 
 	private bool isAttacking;
 	private string name;
 	private double hp, def, lvl, xp, ap, ad;
+	private int coin, key;
 	private bool isDead = false;
 	public const float Speed = 300.0f;
 
@@ -97,7 +98,24 @@ public partial class Player : CharacterBody2D
 		set { isDead = value; }
 		get { return isDead; }
 	}
-
+	[Export]
+	public int Coin
+	{
+		set { coin = value; }
+		get { return coin; }
+	}
+	[Export]
+	public int Key
+	{
+		set { key = value; }
+		get { return key; }
+	}
+	[Export]
+	public State CurrentState
+	{
+		set { currentState = value; }
+		get{ return currentState; }
+	}
 	public Player(string name, double hp, double def, double ap, double ad)
 	{
 		this.NameP = name;
@@ -136,6 +154,18 @@ public partial class Player : CharacterBody2D
 		return $"{NameP} fue atacado";
 	}
 
+	public void AddCoins(int amout)
+	{
+		Coin += amout;
+		GD.Print($"El jugador {Name} tiene {Coin} monedas");
+	}
+
+	public void AddKeys(int amout)
+	{
+		Key += amout;
+		GD.Print($"El jugador {Name} tiene {Key} llaves");
+	}
+
 	public override void _Ready()
 	{
 		animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
@@ -159,6 +189,7 @@ public partial class Player : CharacterBody2D
 		if (Input.IsActionJustPressed("attack"))
 		{
 			isAttacking = true;
+			Attack();
 			ChangeState(State.attack, lastDirection);
 			return;
 		}

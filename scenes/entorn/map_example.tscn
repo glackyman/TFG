@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://csnas8t8ionmi"]
+[gd_scene load_steps=12 format=4 uid="uid://csnas8t8ionmi"]
 
 [ext_resource type="Texture2D" uid="uid://base1b5ndu4lo" path="res://art/Sprites/tiles2.png" id="1_j31lh"]
 [ext_resource type="Texture2D" uid="uid://bdsx64r1qwliy" path="res://art/Sprites/sea_frames.png" id="2_ko08r"]
@@ -6,8 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cs8kdybk27hfp" path="res://scenes/entorn/arbol.tscn" id="3_q4r8h"]
 [ext_resource type="PackedScene" uid="uid://dyu80yuj2cqqw" path="res://scenes/pickups/Key.tscn" id="5_qvehe"]
 [ext_resource type="PackedScene" uid="uid://cgkwv3l6idv1m" path="res://scenes/pickups/Coin.tscn" id="6_h4sxr"]
-[ext_resource type="PackedScene" uid="uid://vnhnaocew702" path="res://scenes/characters/Enano.tscn" id="7_70587"]
-[ext_resource type="PackedScene" uid="uid://c7p8pbq4vdbqj" path="res://scenes/characters/Trol.tscn" id="7_ohy4n"]
+[ext_resource type="PackedScene" uid="uid://c7p8pbq4vdbqj" path="res://scenes/characters/Trol.tscn" id="8_m2ev2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48j5i"]
 texture = ExtResource("2_ko08r")
@@ -197,37 +196,42 @@ collision_mask = 5
 [node name="Warrior" parent="." instance=ExtResource("2_nc56d")]
 position = Vector2(-287, 314)
 
-[node name="Key" parent="." instance=ExtResource("5_qvehe")]
-position = Vector2(884, 430)
-script = null
+[node name="Coin2" parent="." instance=ExtResource("6_h4sxr")]
+position = Vector2(935.165, 1350.9)
+scale = Vector2(6.25, 6.25)
 
 [node name="Coin" parent="." instance=ExtResource("6_h4sxr")]
-position = Vector2(413, 745)
-script = null
+position = Vector2(313, 554)
 
-[node name="Enano" parent="." instance=ExtResource("7_70587")]
-position = Vector2(-219.259, 669.719)
+[node name="Key" parent="." instance=ExtResource("5_qvehe")]
+position = Vector2(-130, 140)
 
-[node name="Trol" parent="." instance=ExtResource("7_ohy4n")]
-position = Vector2(38.1201, 654.663)
+[node name="Coin3" parent="." instance=ExtResource("6_h4sxr")]
+position = Vector2(436, 469)
 
-[node name="Enano2" parent="." instance=ExtResource("7_70587")]
-position = Vector2(-112, 590)
+[node name="Coin4" parent="." instance=ExtResource("6_h4sxr")]
+position = Vector2(173.31, 366.892)
 
-[node name="Enano" parent="Enano2" instance=ExtResource("7_70587")]
-position = Vector2(-219.259, 669.719)
+[node name="Trol" parent="." instance=ExtResource("8_m2ev2")]
+position = Vector2(1324, 332)
+PlayerPath = NodePath("../Warrior")
 
-[node name="Trol" parent="Enano2" instance=ExtResource("7_ohy4n")]
-position = Vector2(38.1201, 654.663)
+[node name="Trol2" parent="." instance=ExtResource("8_m2ev2")]
+position = Vector2(-433, 817)
+PlayerPath = NodePath("../Warrior")
 
-[node name="Enano2" parent="Enano2" instance=ExtResource("7_70587")]
-position = Vector2(-112, 590)
+[node name="Trol3" parent="." instance=ExtResource("8_m2ev2")]
+position = Vector2(-462, -98)
+PlayerPath = NodePath("../Warrior")
 
-[node name="Enano" parent="Enano2/Enano2" instance=ExtResource("7_70587")]
-position = Vector2(-219.259, 669.719)
+[node name="Coin5" parent="." instance=ExtResource("6_h4sxr")]
+position = Vector2(178, 464)
 
-[node name="Trol" parent="Enano2/Enano2" instance=ExtResource("7_ohy4n")]
-position = Vector2(38.1201, 654.663)
+[node name="Coin6" parent="." instance=ExtResource("6_h4sxr")]
+position = Vector2(64, 606)
 
-[node name="Enano2" parent="Enano2/Enano2" instance=ExtResource("7_70587")]
-position = Vector2(-112, 590)
+[node name="Coin7" parent="." instance=ExtResource("6_h4sxr")]
+position = Vector2(50, 416)
+
+[node name="Coin8" parent="." instance=ExtResource("6_h4sxr")]
+position = Vector2(624, 524)

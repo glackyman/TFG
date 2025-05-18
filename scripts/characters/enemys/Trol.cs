@@ -13,14 +13,13 @@ public partial class Trol : Enemy
 
     public override void InitializeEnemy()
     {
-        
-        
+    
         GD.Print($"{Name} el Trol ha aparecido.");
     }
 
     protected override void Attack()
     {
-        GD.Print($"{Name} el Trol golpea fuerte con {AttackDamage} de daño.");
+        //GD.Print($"{Name} el Trol golpea fuerte con {AttackDamage} de daño.");
         
     }
 
