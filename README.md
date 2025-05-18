@@ -23,6 +23,7 @@ Este apartado se dejo en el olvido... muhcas cosas ya esban hechas
 - Ahora los PickUps se añaden al inventario del jugador
 
 ---
+[![Ver gameplay](https://img.youtube.com/vi/mQKa92lbnkA/0.jpg)](https://www.youtube.com/watch?v=mQKa92lbnkA)
 
 ## 🛠️ Problemas
 
