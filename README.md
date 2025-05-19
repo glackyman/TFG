@@ -23,7 +23,7 @@ Este apartado se dejo en el olvido... muhcas cosas ya esban hechas
 - Ahora los PickUps se añaden al inventario del jugador
 
 ---
-[![Ver gameplay](https://img.youtube.com/vi/mQKa92lbnkA/0.jpg)](https://www.youtube.com/watch?v=mQKa92lbnkA)
+[![Ver gameplay](https://img.youtube.com/vi/-G51EvHvI7k/0.jpg)](https://www.youtube.com/watch?v=-G51EvHvI7k)
 
 ## 🛠️ Problemas
 
@@ -66,7 +66,6 @@ Este apartado se dejo en el olvido... muhcas cosas ya esban hechas
   - Llaves
   - Monedas
   - Árboles
-  (_falta terminar su lógica_)
 - Se hicieron los **primeros diseños de mapas**.
 
 ## 🔹 Durante las prácticas
@@ -132,9 +131,13 @@ Este apartado se dejo en el olvido... muhcas cosas ya esban hechas
 
   - [x] Su logica esta finalizada y tienen un buen ciclo de vida. Son eliminadas mediante `QueueFree`
 
-- 🛠️ **Objetos**
+- 🛠️ **Menu**
 
   -[x] Menú extremadmente basico pero funcional
+
+- 🛠️ **Ataque real**
+
+  -[ ] Ahora mismo el ataque se hace mediante un area de daño, no mediante la propia animacion del personaje
 
 ## 🧠 Ideas
 
