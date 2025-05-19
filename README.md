@@ -99,7 +99,7 @@ Este apartado se dejo en el olvido... muhcas cosas ya esban hechas
 
   - Muerte de enemigos.
 
-  -Menu muy basico.
+  -Menu muy basico, las imagenes fueron generadas por Gemini  .
 
 ---
 
