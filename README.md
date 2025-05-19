@@ -97,7 +97,9 @@ Este apartado se dejo en el olvido... muhcas cosas ya esban hechas
 
   - Se termino la logica de los objetos (salvo su uso), ahora ya se eliminan al recogerse y se añaden al inventario del jugador, se utilizan las misma señales de siempre.
 
-  - Muerte de enemigos
+  - Muerte de enemigos.
+
+  -Menu muy basico.
 
 ---
 
@@ -129,6 +131,10 @@ Este apartado se dejo en el olvido... muhcas cosas ya esban hechas
 - 🛠️ **Objetos**
 
   - [x] Su logica esta finalizada y tienen un buen ciclo de vida. Son eliminadas mediante `QueueFree`
+
+- 🛠️ **Objetos**
+
+  -[x] Menú extremadmente basico pero funcional
 
 ## 🧠 Ideas
 

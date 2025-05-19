@@ -1,0 +1,39 @@
+<!-- filepath: art/menu.svg -->
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#232946"/>
+      <stop offset="100%" stop-color="#395144"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  <!-- Fondo degradado -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+  <!-- Árbol (tronco y copa) -->
+  <ellipse cx="350" cy="800" rx="120" ry="90" fill="#e08e2b" opacity="0.8"/>
+  <ellipse cx="350" cy="730" rx="100" ry="70" fill="#f6c453" opacity="0.7"/>
+  <rect x="320" y="800" width="60" height="180" fill="#8d5524" />
+  <!-- Hojas/arbusto -->
+  <ellipse cx="600" cy="900" rx="80" ry="40" fill="#b7efc5" opacity="0.7"/>
+  <ellipse cx="700" cy="950" rx="60" ry="30" fill="#b7efc5" opacity="0.5"/>
+  <!-- Moneda (inspirada en tu sprite) -->
+  <circle cx="1700" cy="200" r="40" fill="#ffe066" stroke="#fff" stroke-width="6"/>
+  <circle cx="1700" cy="200" r="25" fill="#ffd700" opacity="0.7"/>
+  <!-- Llave (simple, pixel style) -->
+  <rect x="1600" y="300" width="60" height="16" fill="#ffd700" rx="8"/>
+  <rect x="1650" y="292" width="16" height="32" fill="#ffd700" rx="8"/>
+  <!-- Personaje (representado como círculo y cabeza, puedes reemplazarlo por tu sprite) -->
+  <circle cx="960" cy="700" r="60" fill="#fff" opacity="0.7"/>
+  <circle cx="960" cy="670" r="25" fill="#ffe0bd" />
+  <!-- Césped -->
+  <ellipse cx="960" cy="1080" rx="1000" ry="120" fill="#b7efc5" opacity="0.3"/>
+  <!-- Título del juego -->
+  <text x="50%" y="18%" text-anchor="middle" font-size="96" font-family="Arial Black, Arial, sans-serif" fill="#fff" filter="url(#shadow)">
+    Glacky's Adventures
+  </text>
+  <text x="50%" y="25%" text-anchor="middle" font-size="36" font-family="Arial, sans-serif" fill="#e0e0e0" opacity="0.8">
+    ¡Explora, recoge y lucha!
+  </text>
+</svg>
